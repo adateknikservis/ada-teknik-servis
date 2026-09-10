@@ -13,6 +13,37 @@
     <meta name="description" content="Ada Teknik Servis Bursa. Buzdolabı, çamaşır makinesi, bulaşık makinesi, klima, kombi ve elektronik cihaz tamiri.">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE ADS GOOGLE TAG -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18052207014');
+    </script>
+
+    <!-- GOOGLE ADS TELEFON DÖNÜŞÜM KODU -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18052207014/eoxZCLbUo_McEKaj-59D',
+          'value': 1.0,
+          'currency': 'TRY',
+          'event_callback': callback
+      });
+
+      return false;
+    }
+    </script>
+
 </head>
 
 <body>
@@ -32,7 +63,10 @@
         <a href="#iletisim">İletişim</a>
     </nav>
 
-    <a href="tel:05346913411" class="header-phone">
+    <!-- TELEFON DÖNÜŞÜMÜ -->
+    <a href="tel:05346913411"
+       class="header-phone"
+       onclick="return gtag_report_conversion('tel:05346913411');">
         📞 0534 691 34 11
     </a>
 
@@ -66,7 +100,10 @@
 
         <div class="hero-buttons">
 
-            <a href="tel:05346913411" class="btn call">
+            <!-- TELEFON DÖNÜŞÜMÜ -->
+            <a href="tel:05346913411"
+               class="btn call"
+               onclick="return gtag_report_conversion('tel:05346913411');">
                 📞 Hemen Ara
             </a>
 
@@ -209,7 +246,10 @@
 
         <div class="contact-buttons">
 
-            <a href="tel:05346913411" class="contact-phone">
+            <!-- TELEFON DÖNÜŞÜMÜ -->
+            <a href="tel:05346913411"
+               class="contact-phone"
+               onclick="return gtag_report_conversion('tel:05346913411');">
                 📞 0534 691 34 11
             </a>
 

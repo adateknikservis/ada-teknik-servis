@@ -1,218 +1,667 @@
 
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<title>Ada Teknik Servis | Bursa Buzdolabı ve Kombi Servisi</title>
-<meta name="description" content="Bursa Ada Teknik Servis. Buzdolabı ve kombi arızaları için teknik servis desteği. Hemen arayın veya WhatsApp üzerinden ulaşın.">
-<meta name="robots" content="index, follow">
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
 
-<link rel="icon" href="favicon.png">
-<link rel="stylesheet" href="style.css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+    padding-bottom: 0;
+}
 
-<!-- GOOGLE ADS ETİKETİ -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18052207014');
-</script>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-<script src="script.js" defer></script>
-</head>
+/* HEADER */
 
-<body>
+.header {
+    min-height: 92px;
+    padding: 12px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #050505;
+    border-bottom: 1px solid #353535;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-<header class="header">
-    <a href="#anasayfa" class="brand">
-        <span class="brand-icon">⚙</span>
-        <span class="brand-name">
-            <strong>ADA</strong>
-            <small>TEKNİK SERVİS</small>
-        </span>
-        <span class="brand-subtitle">Bursa<br>Buzdolabı & Kombi<br>Teknik Servis</span>
-    </a>
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+}
 
-    <nav class="desktop-nav">
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#neden-biz">Neden Biz?</a>
-        <a href="#iletisim">İletişim</a>
-    </nav>
+.brand-icon {
+    color: #ffc400;
+    font-size: 44px;
+}
 
-    <a class="header-call track-call" href="tel:+905346913411">
-        ☎ 0534 691 34 11
-    </a>
-</header>
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
 
-<main>
+.brand-name strong {
+    font-size: 34px;
+    color: white;
+    font-weight: 900;
+}
 
-<section class="hero" id="anasayfa">
+.brand-name small {
+    color: #ffc400;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
 
-    <div class="hero-content">
-        <div class="eyebrow">📍 BURSA · ADA TEKNİK SERVİS</div>
+.brand-subtitle {
+    border-left: 2px solid #ffc400;
+    padding-left: 13px;
+    margin-left: 9px;
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: bold;
+}
 
-        <h1>
-            Bursa Buzdolabı ve
-            <span>Kombi Servisi</span>
-        </h1>
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
 
-        <p>
-            Buzdolabı ve kombi arızalarınız için
-            hızlı, güvenilir ve garantili teknik servis hizmeti.
-        </p>
+.desktop-nav a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: .2s;
+}
 
-        <div class="features">
-            <span>⚡ Hızlı Servis</span>
-            <span>🛡 Garantili İşçilik</span>
-            <span>📍 Bursa Geneli</span>
-        </div>
+.desktop-nav a:hover {
+    color: #ffc400;
+}
 
-        <div class="hero-actions">
-            <a href="tel:+905346913411" class="button button-call track-call">
-                ☎ Hemen Ara
-            </a>
-            <a href="https://wa.me/905346913411" class="button button-whatsapp" target="_blank" rel="noopener">
-                ◉ WhatsApp'tan Yaz
-            </a>
-        </div>
-    </div>
+.header-call {
+    background: #ffc400;
+    color: #080808;
+    padding: 12px 17px;
+    border-radius: 9px;
+    font-weight: 900;
+    white-space: nowrap;
+}
 
-    <div class="hero-visual">
-        <img src="images/ada-hero.jpg"
-             alt="Buzdolabı ve kombi teknik servis"
-             fetchpriority="high">
+/* HERO */
 
-        <div class="visual-card fridge-card">
-            <span class="visual-icon">❄</span>
-            <div>
-                <strong>Buzdolabı Servisi</strong>
-                <small>Soğutmama, motor ve elektronik kart arızaları.</small>
-            </div>
-        </div>
+.hero {
+    min-height: 520px;
+    padding: 55px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 45%, rgba(255,196,0,.18), transparent 35%),
+        #090909;
+}
 
-        <div class="visual-card boiler-card">
-            <span class="visual-icon">♨</span>
-            <div>
-                <strong>Kombi Servisi</strong>
-                <small>Isıtma, sıcak su ve kombi arızaları.</small>
-            </div>
-        </div>
-    </div>
+.hero-content {
+    max-width: 650px;
+}
 
-</section>
+.eyebrow {
+    color: #ffc400;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
 
-<section class="services" id="hizmetler">
-    <div class="section-heading">
-        <span>HİZMETLERİMİZ</span>
-        <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
-        <p>İki ana hizmet alanımızda teknik servis desteği.</p>
-    </div>
+.hero h1 {
+    font-size: clamp(36px, 4.2vw, 60px);
+    line-height: 1.08;
+    font-weight: 900;
+    margin-bottom: 23px;
+}
 
-    <div class="service-grid">
+.hero h1 span {
+    display: block;
+    color: #ffc400;
+}
 
-        <article class="service-card">
-            <img src="images/buzdolabi.jpg" alt="Buzdolabı servisi" loading="lazy">
-            <div class="service-info">
-                <span class="service-symbol">❄</span>
-                <h3>Buzdolabı Servisi</h3>
-                <p>
-                    Soğutmama, motor, gaz sistemi ve elektronik
-                    kart arızaları için teknik servis desteği.
-                </p>
-                <a href="tel:+905346913411" class="service-link track-call">
-                    Servis İçin Ara →
-                </a>
-            </div>
-        </article>
+.hero-content > p {
+    color: #ccc;
+    font-size: 17px;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
 
-        <article class="service-card">
-            <img src="images/kombi.jpg" alt="Kombi servisi" loading="lazy">
-            <div class="service-info">
-                <span class="service-symbol">♨</span>
-                <h3>Kombi Servisi</h3>
-                <p>
-                    Isıtma, sıcak su ve kombi arızaları için
-                    teknik servis desteği.
-                </p>
-                <a href="tel:+905346913411" class="service-link track-call">
-                    Servis İçin Ara →
-                </a>
-            </div>
-        </article>
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 27px;
+}
 
-    </div>
-</section>
+.features span {
+    font-size: 13px;
+    font-weight: bold;
+}
 
-<section class="why-us" id="neden-biz">
-    <div class="section-heading">
-        <span>NEDEN ADA TEKNİK?</span>
-        <h2>Bizi Neden Tercih Etmelisiniz?</h2>
-    </div>
+.hero-actions,
+.contact-actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
 
-    <div class="why-grid">
-        <article class="why-card">
-            <span>⚡</span>
-            <h3>Hızlı Servis</h3>
-            <p>Arızanıza en kısa sürede müdahale etmeyi hedefliyoruz.</p>
-        </article>
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 51px;
+    padding: 12px 23px;
+    border-radius: 10px;
+    font-weight: 900;
+    transition: .2s;
+}
 
-        <article class="why-card">
-            <span>🛠</span>
-            <h3>Teknik Destek</h3>
-            <p>Buzdolabı ve kombi konusunda teknik onarım desteği.</p>
-        </article>
+.button:hover {
+    transform: translateY(-2px);
+}
 
-        <article class="why-card">
-            <span>🛡</span>
-            <h3>Garantili İşçilik</h3>
-            <p>Yapılan işçilik için garanti sunuyoruz.</p>
-        </article>
+.button-call {
+    background: #ffc400;
+    color: #090909;
+}
 
-        <article class="why-card">
-            <span>📍</span>
-            <h3>Bursa Geneli</h3>
-            <p>Bursa genelinde servis hizmeti.</p>
-        </article>
-    </div>
-</section>
+.button-whatsapp {
+    background: #08c65a;
+    color: white;
+}
 
-<section class="contact" id="iletisim">
-    <span>ADA TEKNİK SERVİS</span>
-    <h2>Teknik Servis İçin Bize Ulaşın</h2>
-    <p>Buzdolabı veya kombi arızanız için hemen iletişime geçin.</p>
+.hero-visual {
+    min-height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-content: center;
+    position: relative;
+}
 
-    <div class="contact-actions">
-        <a href="tel:+905346913411" class="button button-call track-call">
-            ☎ 0534 691 34 11
-        </a>
-        <a href="https://wa.me/905346913411" class="button button-whatsapp" target="_blank" rel="noopener">
-            WhatsApp'tan Yaz
-        </a>
-    </div>
-</section>
+.hero-visual > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 17px;
+    opacity: .26;
+}
 
-</main>
+.visual-card {
+    position: relative;
+    z-index: 1;
+    min-height: 135px;
+    padding: 20px 13px;
+    border: 1px solid rgba(255,196,0,.45);
+    border-radius: 15px;
+    background: rgba(10,14,20,.91);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-<footer>
-    <div class="footer-brand">ADA <span>TEKNİK SERVİS</span></div>
-    <p>Bursa Buzdolabı ve Kombi Teknik Servisi</p>
-    <p>© 2026 Ada Teknik Servis. Tüm hakları saklıdır.</p>
-</footer>
+.visual-icon {
+    font-size: 43px;
+    color: #ffc400;
+}
 
-<!-- MOBİL SABİT İLETİŞİM MENÜSÜ -->
-<div class="fixed-contact">
-    <a href="tel:+905346913411" class="fixed-call track-call">
-        ☎ HEMEN ARA
-    </a>
-    <a href="https://wa.me/905346913411" class="fixed-whatsapp" target="_blank" rel="noopener">
-        ◉ WHATSAPP
-    </a>
-</div>
+.visual-card strong,
+.visual-card small {
+    display: block;
+}
 
-</body>
-</html>
+.visual-card strong {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.visual-card small {
+    color: #ccc;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 75px 5%;
+    background: #101010;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+.section-heading > span,
+.contact > span {
+    color: #ffc400;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 3vw, 38px);
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+.service-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #171717;
+    border: 1px solid #363636;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.service-card:hover {
+    border-color: #ffc400;
+    transform: translateY(-5px);
+}
+
+.service-card > img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: #252525;
+}
+
+.service-info {
+    padding: 24px;
+}
+
+.service-symbol {
+    color: #ffc400;
+    font-size: 30px;
+}
+
+.service-info h3 {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.service-info p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #ffc400;
+    font-weight: bold;
+}
+
+/* WHY US */
+
+.why-us {
+    padding: 75px 5%;
+    background: #f4f5f6;
+    color: #111;
+}
+
+.why-us .section-heading > span {
+    color: #a77b00;
+}
+
+.why-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.why-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+.why-card > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #ffc400;
+    color: #111;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.why-card h3 {
+    font-size: 17px;
+    margin: 13px 0 5px;
+}
+
+.why-card p {
+    color: #555;
+    font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 75px 20px;
+    text-align: center;
+    background: #101010;
+}
+
+.contact h2 {
+    font-size: clamp(27px, 4vw, 40px);
+    margin: 10px 0;
+}
+
+.contact p {
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+.contact-actions {
+    justify-content: center;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #050505;
+    padding: 35px 15px 100px;
+    color: #999;
+    font-size: 13px;
+}
+
+.footer-brand {
+    color: #ffc400;
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.footer-brand span {
+    color: white;
+    font-size: 13px;
+}
+
+/* SABİT ALT İLETİŞİM */
+
+.fixed-contact {
+    display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+    .desktop-nav {
+        gap: 13px;
+    }
+
+    .brand-subtitle {
+        display: none;
+    }
+
+    .hero {
+        padding: 45px 4%;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBİL ÖNCELİKLİ TASARIM */
+
+@media (max-width: 650px) {
+
+    body {
+        padding-bottom: 68px;
+    }
+
+    .header {
+        min-height: 67px;
+        padding: 8px 13px;
+    }
+
+    .brand-icon {
+        font-size: 31px;
+    }
+
+    .brand-name strong {
+        font-size: 25px;
+    }
+
+    .brand-name small {
+        font-size: 9px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .header-call {
+        font-size: 11px;
+        padding: 10px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        padding: 38px 18px 35px;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .features span {
+        font-size: 11px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-height: 250px;
+        gap: 9px;
+    }
+
+    .visual-card {
+        min-height: 115px;
+        padding: 12px 8px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .visual-icon {
+        font-size: 30px;
+    }
+
+    .visual-card strong {
+        font-size: 12px;
+    }
+
+    .visual-card small {
+        font-size: 10px;
+    }
+
+    .services,
+    .why-us {
+        padding: 55px 17px;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card > img {
+        height: 210px;
+    }
+
+    .service-info {
+        padding: 20px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .why-card {
+        padding: 18px 13px;
+    }
+
+    .why-card h3 {
+        font-size: 14px;
+    }
+
+    .why-card p {
+        font-size: 12px;
+    }
+
+    .contact {
+        padding: 55px 18px;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    footer {
+        padding-bottom: 35px;
+    }
+
+    /* EKRANIN ALTINDA HER ZAMAN SABİT */
+
+    .fixed-contact {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 66px;
+        z-index: 99999;
+        box-shadow: 0 -3px 18px rgba(0,0,0,.3);
+    }
+
+    .fixed-contact a {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 15px;
+        font-weight: 900;
+    }
+
+    .fixed-call {
+        background: #e52332;
+    }
+
+    .fixed-whatsapp {
+        background: #08c65a;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-call {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .brand-icon {
+        font-size: 26px;
+    }
+
+    .brand-name strong {
+        font-size: 22px;
+    }
+
+    .fixed-contact a {
+        font-size: 13px;
+    }
+}

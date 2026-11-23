@@ -1,667 +1,108 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #080808;
-    color: #fff;
-    line-height: 1.6;
-    padding-bottom: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* HEADER */
-
-.header {
-    min-height: 92px;
-    padding: 12px 4%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    background: #050505;
-    border-bottom: 1px solid #353535;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    flex-shrink: 0;
-}
-
-.brand-icon {
-    color: #ffc400;
-    font-size: 44px;
-}
-
-.brand-name {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-}
-
-.brand-name strong {
-    font-size: 34px;
-    color: white;
-    font-weight: 900;
-}
-
-.brand-name small {
-    color: #ffc400;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.brand-subtitle {
-    border-left: 2px solid #ffc400;
-    padding-left: 13px;
-    margin-left: 9px;
-    font-size: 13px;
-    line-height: 1.25;
-    font-weight: bold;
-}
-
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.desktop-nav a {
-    font-size: 14px;
-    font-weight: bold;
-    transition: .2s;
-}
-
-.desktop-nav a:hover {
-    color: #ffc400;
-}
-
-.header-call {
-    background: #ffc400;
-    color: #080808;
-    padding: 12px 17px;
-    border-radius: 9px;
-    font-weight: 900;
-    white-space: nowrap;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 520px;
-    padding: 55px 7%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 35px;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 85% 45%, rgba(255,196,0,.18), transparent 35%),
-        #090909;
-}
-
-.hero-content {
-    max-width: 650px;
-}
-
-.eyebrow {
-    color: #ffc400;
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    font-size: clamp(36px, 4.2vw, 60px);
-    line-height: 1.08;
-    font-weight: 900;
-    margin-bottom: 23px;
-}
-
-.hero h1 span {
-    display: block;
-    color: #ffc400;
-}
-
-.hero-content > p {
-    color: #ccc;
-    font-size: 17px;
-    max-width: 500px;
-    margin-bottom: 25px;
-}
-
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-bottom: 27px;
-}
-
-.features span {
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.hero-actions,
-.contact-actions {
-    display: flex;
-    gap: 13px;
-    flex-wrap: wrap;
-}
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 51px;
-    padding: 12px 23px;
-    border-radius: 10px;
-    font-weight: 900;
-    transition: .2s;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-}
-
-.button-call {
-    background: #ffc400;
-    color: #090909;
-}
-
-.button-whatsapp {
-    background: #08c65a;
-    color: white;
-}
-
-.hero-visual {
-    min-height: 350px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    align-content: center;
-    position: relative;
-}
-
-.hero-visual > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 17px;
-    opacity: .26;
-}
-
-.visual-card {
-    position: relative;
-    z-index: 1;
-    min-height: 135px;
-    padding: 20px 13px;
-    border: 1px solid rgba(255,196,0,.45);
-    border-radius: 15px;
-    background: rgba(10,14,20,.91);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.visual-icon {
-    font-size: 43px;
-    color: #ffc400;
-}
-
-.visual-card strong,
-.visual-card small {
-    display: block;
-}
-
-.visual-card strong {
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-
-.visual-card small {
-    color: #ccc;
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-/* SERVICES */
-
-.services {
-    padding: 75px 5%;
-    background: #101010;
-}
-
-.section-heading {
-    text-align: center;
-    margin: 0 auto 40px;
-}
-
-.section-heading > span,
-.contact > span {
-    color: #ffc400;
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.section-heading h2 {
-    font-size: clamp(27px, 3vw, 38px);
-    margin: 8px 0;
-}
-
-.section-heading p {
-    color: #aaa;
-    font-size: 15px;
-}
-
-.service-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.service-card {
-    background: #171717;
-    border: 1px solid #363636;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: .25s;
-}
-
-.service-card:hover {
-    border-color: #ffc400;
-    transform: translateY(-5px);
-}
-
-.service-card > img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-    background: #252525;
-}
-
-.service-info {
-    padding: 24px;
-}
-
-.service-symbol {
-    color: #ffc400;
-    font-size: 30px;
-}
-
-.service-info h3 {
-    font-size: 22px;
-    margin: 8px 0;
-}
-
-.service-info p {
-    color: #bbb;
-    font-size: 14px;
-}
-
-.service-link {
-    display: inline-block;
-    margin-top: 18px;
-    color: #ffc400;
-    font-weight: bold;
-}
-
-/* WHY US */
-
-.why-us {
-    padding: 75px 5%;
-    background: #f4f5f6;
-    color: #111;
-}
-
-.why-us .section-heading > span {
-    color: #a77b00;
-}
-
-.why-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.why-card {
-    background: white;
-    border-radius: 15px;
-    padding: 25px 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.06);
-}
-
-.why-card > span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background: #ffc400;
-    color: #111;
-    border-radius: 12px;
-    font-size: 24px;
-}
-
-.why-card h3 {
-    font-size: 17px;
-    margin: 13px 0 5px;
-}
-
-.why-card p {
-    color: #555;
-    font-size: 13px;
-}
-
-/* CONTACT */
-
-.contact {
-    padding: 75px 20px;
-    text-align: center;
-    background: #101010;
-}
-
-.contact h2 {
-    font-size: clamp(27px, 4vw, 40px);
-    margin: 10px 0;
-}
-
-.contact p {
-    color: #bbb;
-    margin-bottom: 25px;
-}
-
-.contact-actions {
-    justify-content: center;
-}
-
-/* FOOTER */
-
-footer {
-    text-align: center;
-    background: #050505;
-    padding: 35px 15px 100px;
-    color: #999;
-    font-size: 13px;
-}
-
-.footer-brand {
-    color: #ffc400;
-    font-size: 26px;
-    font-weight: 900;
-    margin-bottom: 5px;
-}
-
-.footer-brand span {
-    color: white;
-    font-size: 13px;
-}
-
-/* SABİT ALT İLETİŞİM */
-
-.fixed-contact {
-    display: none;
-}
-
-/* TABLET */
-
-@media (max-width: 950px) {
-    .desktop-nav {
-        gap: 13px;
-    }
-
-    .brand-subtitle {
-        display: none;
-    }
-
-    .hero {
-        padding: 45px 4%;
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* MOBİL ÖNCELİKLİ TASARIM */
-
-@media (max-width: 650px) {
-
-    body {
-        padding-bottom: 68px;
-    }
-
-    .header {
-        min-height: 67px;
-        padding: 8px 13px;
-    }
-
-    .brand-icon {
-        font-size: 31px;
-    }
-
-    .brand-name strong {
-        font-size: 25px;
-    }
-
-    .brand-name small {
-        font-size: 9px;
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .header-call {
-        font-size: 11px;
-        padding: 10px;
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        padding: 38px 18px 35px;
-        gap: 25px;
-        text-align: center;
-    }
-
-    .hero-content {
-        width: 100%;
-    }
-
-    .eyebrow {
-        font-size: 12px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-content > p {
-        font-size: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .features {
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .features span {
-        font-size: 11px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-        min-height: 52px;
-    }
-
-    .hero-visual {
-        width: 100%;
-        min-height: 250px;
-        gap: 9px;
-    }
-
-    .visual-card {
-        min-height: 115px;
-        padding: 12px 8px;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .visual-icon {
-        font-size: 30px;
-    }
-
-    .visual-card strong {
-        font-size: 12px;
-    }
-
-    .visual-card small {
-        font-size: 10px;
-    }
-
-    .services,
-    .why-us {
-        padding: 55px 17px;
-    }
-
-    .section-heading {
-        margin-bottom: 28px;
-    }
-
-    .section-heading h2 {
-        font-size: 27px;
-    }
-
-    .section-heading p {
-        font-size: 13px;
-    }
-
-    .service-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .service-card > img {
-        height: 210px;
-    }
-
-    .service-info {
-        padding: 20px;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .why-card {
-        padding: 18px 13px;
-    }
-
-    .why-card h3 {
-        font-size: 14px;
-    }
-
-    .why-card p {
-        font-size: 12px;
-    }
-
-    .contact {
-        padding: 55px 18px;
-    }
-
-    .contact-actions {
-        flex-direction: column;
-    }
-
-    footer {
-        padding-bottom: 35px;
-    }
-
-    /* EKRANIN ALTINDA HER ZAMAN SABİT */
-
-    .fixed-contact {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 66px;
-        z-index: 99999;
-        box-shadow: 0 -3px 18px rgba(0,0,0,.3);
-    }
-
-    .fixed-contact a {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 15px;
-        font-weight: 900;
-    }
-
-    .fixed-call {
-        background: #e52332;
-    }
-
-    .fixed-whatsapp {
-        background: #08c65a;
-    }
-}
-
-@media (max-width: 360px) {
-    .header-call {
-        font-size: 10px;
-        padding: 8px;
-    }
-
-    .brand-icon {
-        font-size: 26px;
-    }
-
-    .brand-name strong {
-        font-size: 22px;
-    }
-
-    .fixed-contact a {
-        font-size: 13px;
-    }
-}
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ada Teknik Servis | Bursa Buzdolabı ve Kombi Servisi</title>
+  <meta name="description" content="Bursa'da buzdolabı ve kombi arızaları için hızlı, güvenilir ve garantili teknik servis. Hemen arayın.">
+  <meta name="theme-color" content="#080909">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Ads etiketi -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18052207014');
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#anasayfa" aria-label="Ada Teknik Servis ana sayfa">
+      <span class="brand-mark">⚙</span>
+      <span class="brand-main"><strong>ADA</strong><b>TEKNİK SERVİS</b></span>
+      <span class="brand-divider"></span>
+      <span class="brand-sub">Bursa<br>Buzdolabı &amp; Kombi<br>Teknik Servis</span>
+    </a>
+    <nav class="main-nav" aria-label="Ana menü">
+      <a class="active" href="#anasayfa">Ana Sayfa</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#neden-biz">Neden Biz?</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+    <a class="header-phone" href="tel:+905346913411" data-call><span>☎</span> 0534 691 34 11</a>
+    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span>📍</span> BURSA · ADA TEKNİK SERVİS</div>
+        <h1>Bursa Buzdolabı ve<br><em>Kombi Servisi</em></h1>
+        <div class="yellow-swoosh"></div>
+        <p class="hero-description">Buzdolabı ve kombi arızalarınız için<br class="desktop-only"> hızlı, güvenilir ve garantili teknik servis.</p>
+        <div class="quick-points">
+          <span><b>ϟ</b> Hızlı Servis</span>
+          <span><b>⬟</b> Garantili İşçilik</span>
+          <span><b>●</b> Bursa Geneli</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-yellow" href="tel:+905346913411" data-call><span>☎</span> Hemen Ara</a>
+          <a class="btn btn-green" href="https://wa.me/905346913411" target="_blank" rel="noopener"><span class="wa-symbol">◉</span> WhatsApp'tan Yaz</a>
+        </div>
+      </div>
+      <div class="hero-products" aria-hidden="true">
+        <img class="hero-fridge" src="images/buzdolabi.jpg" alt="">
+        <img class="hero-boiler" src="images/kombi.jpg" alt="">
+      </div>
+      <div class="hero-service-links">
+        <a href="#hizmetler" class="service-link fridge-link"><span class="service-icon snow">❄</span><span><strong>Buzdolabı Servisi</strong><small>Soğutmama, motor, gaz ve<br> elektronik kart arızaları.</small></span><b class="arrow">›</b></a>
+        <a href="#hizmetler" class="service-link boiler-link"><span class="service-icon flame">♨</span><span><strong>Kombi Servisi</strong><small>Isıtma, sıcak su ve<br> kombi arızaları.</small></span><b class="arrow">›</b></a>
+      </div>
+      <div class="hero-corner"></div>
+    </section>
+
+    <section class="services" id="hizmetler">
+      <div class="section-kicker"><i></i> HİZMETLERİMİZ <i></i></div>
+      <h2>Buzdolabı ve Kombi Teknik Servisi</h2>
+      <div class="service-grid">
+        <article class="service-card">
+          <img src="images/buzdolabi.jpg" alt="Buzdolabı teknik servis hizmeti" loading="lazy">
+          <div><h3>Buzdolabı Tamiri</h3><p>Soğutmama, motor, gaz kaçağı ve elektronik kart arızalarında teknik destek.</p><a href="tel:+905346913411" data-call>Servis için ara <span>›</span></a></div>
+        </article>
+        <article class="service-card">
+          <img src="images/kombi.jpg" alt="Kombi teknik servis hizmeti" loading="lazy">
+          <div><h3>Kombi Tamiri</h3><p>Isıtma ve sıcak su sorunları için arıza tespiti ve onarım hizmeti.</p><a href="tel:+905346913411" data-call>Servis için ara <span>›</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="why-us" id="neden-biz">
+      <div class="section-kicker"><i></i> NEDEN ADA TEKNİK? <i></i></div>
+      <h2>Bizi Neden Tercih Etmelisiniz?</h2>
+      <div class="benefit-grid">
+        <article class="benefit"><span class="benefit-icon">ϟ</span><div><h3>Hızlı Servis</h3><p>Arızanıza en kısa sürede müdahale ediyoruz.</p></div></article>
+        <article class="benefit"><span class="benefit-icon">⚒</span><div><h3>Uzman Teknik Destek</h3><p>Buzdolabı ve kombi konusunda deneyimli servis.</p></div></article>
+        <article class="benefit"><span class="benefit-icon">♢</span><div><h3>Garantili Onarım</h3><p>Yapılan işlemler için işçilik garantisi.</p></div></article>
+        <article class="benefit"><span class="benefit-icon">●</span><div><h3>Bursa Geneli Hizmet</h3><p>Bursa'nın birçok bölgesine servis desteği sağlıyoruz.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="iletisim">
+    <strong>ADA TEKNİK SERVİS</strong>
+    <span>Bursa Buzdolabı &amp; Kombi Teknik Servis</span>
+    <a href="tel:+905346913411" data-call>0534 691 34 11</a>
+  </footer>
+
+  <div class="mobile-contact" aria-label="Hızlı iletişim">
+    <a class="mobile-call" href="tel:+905346913411" data-call><span>☎</span> HEMEN ARA&nbsp; 0534 691 34 11</a>
+    <a class="mobile-whatsapp" href="https://wa.me/905346913411" target="_blank" rel="noopener"><span>◉</span> WHATSAPP'TAN YAZ</a>
+  </div>
+</body>
+</html>

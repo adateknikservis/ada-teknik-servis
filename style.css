@@ -1,543 +1,638 @@
+
+:root {
+  --yellow: #ffc400;
+  --black: #090909;
+  --dark: #111111;
+  --white: #ffffff;
+  --gray: #a9a9a9;
+  --red: #df303d;
+  --green: #19bd60;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #090909;
-    color: #ffffff;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-/* =========================
-   ÜST MENÜ
-========================= */
+/* HEADER */
 
 .header {
-    height: 82px;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0b0b0b;
-    border-bottom: 1px solid #252525;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  min-height: 75px;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #050505;
+  border-bottom: 1px solid #292929;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 30px;
-    font-weight: 900;
-    color: #ffc400;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: white;
+  font-weight: 900;
+}
+
+.logo span {
+  color: var(--yellow);
+  font-size: 30px;
 }
 
 .logo small {
-    font-size: 13px;
-    color: white;
-    letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .header nav {
-    display: flex;
-    gap: 32px;
+  display: flex;
+  gap: 25px;
 }
 
 .header nav a {
-    color: #ddd;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.3s;
+  color: #ddd;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .header nav a:hover {
-    color: #ffc400;
+  color: var(--yellow);
 }
 
 .header-phone {
-    background: #ffc400;
-    color: #111;
-    padding: 13px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+  background: var(--yellow);
+  color: #111;
+  padding: 11px 17px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-.header-phone:hover {
-    transform: translateY(-2px);
-}
-
-
-/* =========================
-   ANA BÖLÜM
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 650px;
-    padding: 65px 5%;
-    display: flex;
-    align-items: center;
-    gap: 55px;
-    background:
-        radial-gradient(
-            circle at 80% 45%,
-            rgba(255, 196, 0, 0.16),
-            transparent 35%
-        ),
-        #090909;
-}
-
-.hero-image {
-    width: 50%;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 470px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border-radius: 18px;
-    border: 1px solid #333;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  min-height: 570px;
+  padding: 65px 7%;
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 45px;
+  background:
+    radial-gradient(circle at 85% 40%, #554000 0%, transparent 35%),
+    #090909;
 }
 
 .hero-content {
-    width: 50%;
+  max-width: 650px;
 }
 
-.mini-title {
-    color: #ffc400;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
+.eyebrow,
+.section-title > span,
+.contact > span {
+  color: var(--yellow);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 .hero h1 {
-    font-size: 55px;
-    line-height: 1.08;
-    margin-bottom: 25px;
-    max-width: 650px;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.13;
+  margin: 20px 0;
+  letter-spacing: -1.5px;
 }
 
-.hero h1 strong {
-    color: #ffc400;
-    display: inline;
+.hero h1 span {
+  display: block;
+  color: var(--yellow);
 }
 
 .hero-content > p {
-    color: #bdbdbd;
-    font-size: 18px;
-    max-width: 650px;
-    margin-bottom: 30px;
+  color: #bbb;
+  font-size: 17px;
+  max-width: 530px;
+  margin-bottom: 27px;
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .btn {
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+  padding: 14px 22px;
+  border-radius: 9px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  transition: 0.2s;
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: #111;
+}
+
+.btn-outline {
+  border: 1px solid #777;
+  color: white;
+  background: #191919;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-.call {
-    background: #ffc400;
-    color: #111;
+.hero-points {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 25px;
 }
 
-.whatsapp {
-    background: #191919;
-    color: white;
-    border: 1px solid #444;
+/* HERO VISUAL */
+
+.hero-visual {
+  min-height: 380px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-content: center;
+  position: relative;
 }
 
-.hero-info {
-    margin-top: 25px;
-    color: #999;
-    font-size: 14px;
+.visual-card {
+  min-height: 290px;
+  border: 1px solid #49402a;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(145deg, #292929, #111);
 }
 
+.fridge-visual {
+  background: linear-gradient(145deg, #263441, #111820);
+}
 
-/* =========================
-   HİZMETLER
-========================= */
+.boiler-visual {
+  background: linear-gradient(145deg, #42351b, #17120a);
+}
+
+.visual-icon {
+  font-size: 90px;
+  color: var(--yellow);
+  text-shadow: 0 5px 25px #000;
+}
+
+.visual-label {
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.visual-caption {
+  position: absolute;
+  bottom: -22px;
+  right: 5px;
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* SERVICES */
 
 .services {
-    padding: 90px 5%;
-    background: #101010;
+  padding: 80px 6%;
+  background: #101010;
 }
 
 .section-title {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 50px;
-}
-
-.section-title span {
-    color: #ffc400;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 38px;
 }
 
 .section-title h2 {
-    font-size: 38px;
-    margin: 8px 0 12px;
+  font-size: clamp(27px, 4vw, 39px);
+  margin: 8px 0;
 }
 
 .section-title p {
-    color: #888;
+  color: var(--gray);
 }
 
 .service-grid {
-    max-width: 1250px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
 }
 
 .service-card {
-    padding: 30px 22px;
-    min-height: 210px;
-    text-align: center;
-    background: #151515;
-    border: 1px solid #292929;
-    border-radius: 12px;
-    transition: 0.3s;
+  position: relative;
+  padding: 32px;
+  min-height: 260px;
+  background: linear-gradient(145deg, #1d1d1d, #121212);
+  border: 1px solid #343434;
+  border-radius: 15px;
+  transition: 0.25s;
 }
 
 .service-card:hover {
-    transform: translateY(-7px);
-    border-color: #ffc400;
-    box-shadow: 0 10px 30px rgba(255, 196, 0, 0.08);
+  border-color: var(--yellow);
+  transform: translateY(-4px);
 }
 
 .service-icon {
-    font-size: 42px;
-    margin-bottom: 15px;
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.card-number {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: #555;
+  font-size: 27px;
+  font-weight: 900;
 }
 
 .service-card h3 {
-    font-size: 19px;
-    margin-bottom: 10px;
+  font-size: 23px;
+  margin-bottom: 10px;
 }
 
 .service-card p {
-    color: #888;
-    font-size: 14px;
+  color: #aaa;
+  font-size: 15px;
 }
 
+.service-card a {
+  display: inline-block;
+  color: var(--yellow);
+  font-weight: bold;
+  margin-top: 20px;
+}
 
-/* =========================
-   NEDEN BİZ
-========================= */
+/* WHY US */
 
 .why-us {
-    padding: 90px 5%;
-    background: #090909;
+  padding: 75px 6%;
+  background: #090909;
 }
 
 .why-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
 }
 
 .why-card {
-    padding: 30px 20px;
-    text-align: center;
-    background: #121212;
-    border: 1px solid #272727;
-    border-radius: 12px;
+  padding: 27px 18px;
+  background: #151515;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.why-card > div {
-    font-size: 38px;
-    margin-bottom: 12px;
+.why-card > span {
+  font-size: 34px;
+  color: var(--yellow);
 }
 
 .why-card h3 {
-    margin-bottom: 8px;
+  font-size: 17px;
+  margin: 12px 0 6px;
 }
 
 .why-card p {
-    color: #888;
-    font-size: 14px;
+  color: #999;
+  font-size: 14px;
 }
 
-
-/* =========================
-   İLETİŞİM
-========================= */
+/* CONTACT */
 
 .contact {
-    padding: 90px 20px;
-    text-align: center;
-    background: #ffc400;
-    color: #111;
+  padding: 65px 20px;
+  text-align: center;
+  background: var(--yellow);
+  color: #111;
 }
 
-.contact-content {
-    max-width: 750px;
-    margin: auto;
-}
-
-.contact-content > span {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.contact > span {
+  color: #222;
 }
 
 .contact h2 {
-    font-size: 42px;
-    margin: 8px 0;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 10px 0;
 }
 
 .contact p {
-    margin-bottom: 30px;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.contact-phone,
-.contact-whatsapp {
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-weight: bold;
+  margin: 0 auto 24px;
+  max-width: 550px;
 }
 
 .contact-phone {
-    background: #111;
-    color: white;
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  font-weight: bold;
 }
 
-.contact-whatsapp {
-    background: white;
-    color: #111;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    padding: 40px 20px;
-    text-align: center;
-    background: #060606;
-    color: #777;
+  padding: 35px 20px 100px;
+  text-align: center;
+  background: #050505;
+  color: #888;
 }
 
 .footer-logo {
-    color: #ffc400;
-    font-size: 24px;
-    font-weight: 900;
+  font-size: 26px;
+  color: var(--yellow);
+  font-weight: 900;
 }
 
 .footer-logo span {
-    color: white;
-    font-size: 13px;
+  color: white;
+  font-size: 13px;
 }
 
 footer p {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .copyright {
-    margin-top: 15px;
-    font-size: 13px;
+  font-size: 12px;
+  margin-top: 15px;
 }
 
+/* MOBILE FIXED CONTACT BAR */
 
-/* =========================
-   SABİT WHATSAPP
-========================= */
+.mobile-contact {
+  display: none;
+}
 
-.floating-whatsapp {
+/* TABLET */
+
+@media (max-width: 900px) {
+  .header nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-points {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+  }
+}
+
+/* MOBILE FIRST */
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+
+  body {
+    font-size: 15px;
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+  }
+
+  .header {
+    min-height: 65px;
+    padding: 8px 15px;
+  }
+
+  .logo span {
+    font-size: 25px;
+  }
+
+  .logo small {
+    font-size: 10px;
+  }
+
+  .header-phone {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 37px 18px 50px;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+    margin: 15px 0;
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 51px;
+  }
+
+  .hero-points {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .hero-visual {
+    min-height: 220px;
+    gap: 9px;
+  }
+
+  .visual-card {
+    min-height: 205px;
+    border-radius: 12px;
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .visual-icon {
+    font-size: 62px;
+  }
+
+  .visual-label {
+    font-size: 11px;
+  }
+
+  .visual-caption {
+    font-size: 10px;
+  }
+
+  .services,
+  .why-us {
+    padding: 55px 17px;
+  }
+
+  .section-title {
+    margin-bottom: 28px;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-card h3 {
+    font-size: 21px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .why-card {
+    padding: 22px 15px;
+  }
+
+  .contact {
+    padding: 55px 18px;
+  }
+
+  .contact-phone {
+    display: block;
+  }
+
+  footer {
+    padding-bottom: 35px;
+  }
+
+  /* SABİT ALT BUTONLAR */
+
+  .mobile-contact {
+    display: flex;
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 58px;
-    height: 58px;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 66px;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .mobile-contact a {
+    flex: 1;
+    min-height: 66px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #25d366;
+    gap: 9px;
     color: white;
-    border-radius: 50%;
-    font-size: 28px;
-    z-index: 2000;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+  }
+
+  .mobile-call {
+    background: var(--red);
+  }
+
+  .mobile-whatsapp {
+    background: var(--green);
+  }
+
+  .mobile-contact a:active {
+    filter: brightness(0.9);
+  }
+
+  .mobile-contact a span {
+    font-size: 23px;
+  }
 }
 
+/* HAREKET AZALTMA TERCİHİ */
 
-/* =========================
-   TABLET
-========================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-@media (max-width: 1000px) {
-
-    .header nav {
-        display: none;
-    }
-
-    .hero {
-        gap: 35px;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* =========================
-   TELEFON
-========================= */
-
-@media (max-width: 650px) {
-
-    .header {
-        height: 70px;
-        padding: 0 18px;
-    }
-
-    .logo {
-        font-size: 22px;
-    }
-
-    .logo small {
-        display: none;
-    }
-
-    .header-phone {
-        padding: 9px 12px;
-        font-size: 12px;
-    }
-
-    .hero {
-        padding: 35px 18px 60px;
-        flex-direction: column;
-    }
-
-    .hero-image,
-    .hero-content {
-        width: 100%;
-    }
-
-    .hero-image img {
-        height: 300px;
-    }
-
-    .hero-content {
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-content > p {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        text-align: center;
-    }
-
-    .hero-info {
-        font-size: 13px;
-    }
-
-    .services,
-    .why-us {
-        padding: 65px 18px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-    }
-
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact {
-        padding: 65px 18px;
-    }
-
-    .contact h2 {
-        font-size: 32px;
-    }
-
-    .contact-buttons {
-        flex-direction: column;
-    }
-
-    .floating-whatsapp {
-        right: 18px;
-        bottom: 18px;
-    }
-}
-.service-card {
-    text-decoration: none;
-    color: white;
-}
-
-.service-link {
-    display: inline-block;
-    margin-top: 18px;
-    color: #ffc400;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.service-card:hover .service-link {
-    color: white;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

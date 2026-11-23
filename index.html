@@ -2,222 +2,216 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
 
-  <title>Ada Teknik Servis | Bursa Buzdolabı ve Kombi Servisi</title>
-  <meta name="description" content="Bursa buzdolabı ve kombi teknik servis hizmeti. Ada Teknik Servis ile iletişime geçin. 0534 691 34 11.">
-  <meta name="theme-color" content="#090909">
-  <meta name="robots" content="index, follow">
+<title>Ada Teknik Servis | Bursa Buzdolabı ve Kombi Servisi</title>
+<meta name="description" content="Bursa Ada Teknik Servis. Buzdolabı ve kombi arızaları için teknik servis desteği. Hemen arayın veya WhatsApp üzerinden ulaşın.">
+<meta name="robots" content="index, follow">
 
-  <link rel="icon" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
 
-  <!-- GOOGLE ADS ETİKETİ: TEK KEZ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18052207014');
+<!-- GOOGLE ADS ETİKETİ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18052207014');
+</script>
 
-    // Telefon tıklama dönüşümü
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        window.location.href = url;
-      };
-
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18052207014/eoxZCLbUo_McEKaj-59',
-        'value': 1.0,
-        'currency': 'TRY',
-        'event_callback': callback
-      });
-
-      setTimeout(function () {
-        window.location.href = url;
-      }, 1500);
-
-      return false;
-    }
-
-    // WhatsApp tıklaması ayrı ölçülür
-    function trackWhatsApp() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'whatsapp_click', {
-          'event_category': 'contact',
-          'event_label': 'Ada Teknik Servis WhatsApp'
-        });
-      }
-    }
-  </script>
+<script src="script.js" defer></script>
 </head>
 
 <body>
 
 <header class="header">
-  <a href="#anasayfa" class="logo" aria-label="Ada Teknik Servis ana sayfa">
-    <span>ADA</span>
-    <small>TEKNİK SERVİS</small>
-  </a>
+    <a href="#anasayfa" class="brand">
+        <span class="brand-icon">⚙</span>
+        <span class="brand-name">
+            <strong>ADA</strong>
+            <small>TEKNİK SERVİS</small>
+        </span>
+        <span class="brand-subtitle">Bursa<br>Buzdolabı & Kombi<br>Teknik Servis</span>
+    </a>
 
-  <nav>
-    <a href="#anasayfa">Ana Sayfa</a>
-    <a href="#hizmetler">Hizmetler</a>
-    <a href="#neden-biz">Neden Biz?</a>
-    <a href="#iletisim">İletişim</a>
-  </nav>
+    <nav class="desktop-nav">
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#neden-biz">Neden Biz?</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
 
-  <a class="header-phone" href="tel:05346913411"
-     onclick="return gtag_report_conversion('tel:05346913411')">
-    ☎ 0534 691 34 11
-  </a>
+    <a class="header-call track-call" href="tel:+905346913411">
+        ☎ 0534 691 34 11
+    </a>
 </header>
 
 <main>
 
 <section class="hero" id="anasayfa">
-  <div class="hero-content">
-    <span class="eyebrow">BURSA • ADA TEKNİK SERVİS</span>
 
-    <h1>
-      Bursa Buzdolabı ve
-      <span>Kombi Servisi</span>
-    </h1>
+    <div class="hero-content">
+        <div class="eyebrow">📍 BURSA · ADA TEKNİK SERVİS</div>
 
-    <p>
-      Buzdolabı ve kombi arızalarınız için teknik servis
-      desteği almak üzere hemen bizimle iletişime geçin.
-    </p>
+        <h1>
+            Bursa Buzdolabı ve
+            <span>Kombi Servisi</span>
+        </h1>
 
-    <div class="hero-buttons">
-      <a class="btn btn-yellow" href="tel:05346913411"
-         onclick="return gtag_report_conversion('tel:05346913411')">
-        ☎ Hemen Ara
-      </a>
+        <p>
+            Buzdolabı ve kombi arızalarınız için
+            hızlı, güvenilir ve garantili teknik servis hizmeti.
+        </p>
 
-      <a class="btn btn-outline"
-         href="https://wa.me/905346913411"
-         target="_blank" rel="noopener"
-         onclick="trackWhatsApp()">
-        WhatsApp'tan Yaz
-      </a>
+        <div class="features">
+            <span>⚡ Hızlı Servis</span>
+            <span>🛡 Garantili İşçilik</span>
+            <span>📍 Bursa Geneli</span>
+        </div>
+
+        <div class="hero-actions">
+            <a href="tel:+905346913411" class="button button-call track-call">
+                ☎ Hemen Ara
+            </a>
+            <a href="https://wa.me/905346913411" class="button button-whatsapp" target="_blank" rel="noopener">
+                ◉ WhatsApp'tan Yaz
+            </a>
+        </div>
     </div>
 
-    <div class="hero-points">
-      <span>✓ Bursa servis hizmeti</span>
-      <span>✓ Buzdolabı ve kombi</span>
-    </div>
-  </div>
+    <div class="hero-visual">
+        <img src="images/ada-hero.jpg"
+             alt="Buzdolabı ve kombi teknik servis"
+             fetchpriority="high">
 
-  <div class="hero-visual">
-    <div class="visual-card fridge-visual">
-      <span class="visual-icon">❄</span>
-      <span class="visual-label">BUZDOLABI SERVİSİ</span>
+        <div class="visual-card fridge-card">
+            <span class="visual-icon">❄</span>
+            <div>
+                <strong>Buzdolabı Servisi</strong>
+                <small>Soğutmama, motor ve elektronik kart arızaları.</small>
+            </div>
+        </div>
+
+        <div class="visual-card boiler-card">
+            <span class="visual-icon">♨</span>
+            <div>
+                <strong>Kombi Servisi</strong>
+                <small>Isıtma, sıcak su ve kombi arızaları.</small>
+            </div>
+        </div>
     </div>
-    <div class="visual-card boiler-visual">
-      <span class="visual-icon">♨</span>
-      <span class="visual-label">KOMBİ SERVİSİ</span>
-    </div>
-    <div class="visual-caption">ADA TEKNİK SERVİS</div>
-  </div>
+
 </section>
 
 <section class="services" id="hizmetler">
-  <div class="section-title">
-    <span>HİZMETLERİMİZ</span>
-    <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
-    <p>İlk etapta iki ana hizmet alanımız.</p>
-  </div>
+    <div class="section-heading">
+        <span>HİZMETLERİMİZ</span>
+        <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
+        <p>İki ana hizmet alanımızda teknik servis desteği.</p>
+    </div>
 
-  <div class="service-grid">
-    <article class="service-card">
-      <div class="service-icon">❄️</div>
-      <span class="card-number">01</span>
-      <h3>Buzdolabı Servisi</h3>
-      <p>
-        Soğutmama, motor, gaz sistemi ve elektronik
-        kart arızaları için teknik servis desteği.
-      </p>
-      <a href="tel:05346913411"
-         onclick="return gtag_report_conversion('tel:05346913411')">
-        Servis için ara →
-      </a>
-    </article>
+    <div class="service-grid">
 
-    <article class="service-card">
-      <div class="service-icon">♨️</div>
-      <span class="card-number">02</span>
-      <h3>Kombi Servisi</h3>
-      <p>
-        Isıtma, sıcak su ve kombi arızaları için
-        teknik servis desteği.
-      </p>
-      <a href="tel:05346913411"
-         onclick="return gtag_report_conversion('tel:05346913411')">
-        Servis için ara →
-      </a>
-    </article>
-  </div>
+        <article class="service-card">
+            <img src="images/buzdolabi.jpg" alt="Buzdolabı servisi" loading="lazy">
+            <div class="service-info">
+                <span class="service-symbol">❄</span>
+                <h3>Buzdolabı Servisi</h3>
+                <p>
+                    Soğutmama, motor, gaz sistemi ve elektronik
+                    kart arızaları için teknik servis desteği.
+                </p>
+                <a href="tel:+905346913411" class="service-link track-call">
+                    Servis İçin Ara →
+                </a>
+            </div>
+        </article>
+
+        <article class="service-card">
+            <img src="images/kombi.jpg" alt="Kombi servisi" loading="lazy">
+            <div class="service-info">
+                <span class="service-symbol">♨</span>
+                <h3>Kombi Servisi</h3>
+                <p>
+                    Isıtma, sıcak su ve kombi arızaları için
+                    teknik servis desteği.
+                </p>
+                <a href="tel:+905346913411" class="service-link track-call">
+                    Servis İçin Ara →
+                </a>
+            </div>
+        </article>
+
+    </div>
 </section>
 
 <section class="why-us" id="neden-biz">
-  <div class="section-title">
-    <span>ADA TEKNİK SERVİS</span>
-    <h2>Neden Bizi Tercih Etmelisiniz?</h2>
-  </div>
+    <div class="section-heading">
+        <span>NEDEN ADA TEKNİK?</span>
+        <h2>Bizi Neden Tercih Etmelisiniz?</h2>
+    </div>
 
-  <div class="why-grid">
-    <div class="why-card">
-      <span>☎</span>
-      <h3>Kolay İletişim</h3>
-      <p>Telefon veya WhatsApp üzerinden bize ulaşın.</p>
+    <div class="why-grid">
+        <article class="why-card">
+            <span>⚡</span>
+            <h3>Hızlı Servis</h3>
+            <p>Arızanıza en kısa sürede müdahale etmeyi hedefliyoruz.</p>
+        </article>
+
+        <article class="why-card">
+            <span>🛠</span>
+            <h3>Teknik Destek</h3>
+            <p>Buzdolabı ve kombi konusunda teknik onarım desteği.</p>
+        </article>
+
+        <article class="why-card">
+            <span>🛡</span>
+            <h3>Garantili İşçilik</h3>
+            <p>Yapılan işçilik için garanti sunuyoruz.</p>
+        </article>
+
+        <article class="why-card">
+            <span>📍</span>
+            <h3>Bursa Geneli</h3>
+            <p>Bursa genelinde servis hizmeti.</p>
+        </article>
     </div>
-    <div class="why-card">
-      <span>🛠</span>
-      <h3>Teknik Destek</h3>
-      <p>Cihazınızın arızası hakkında bilgi alın.</p>
-    </div>
-    <div class="why-card">
-      <span>📍</span>
-      <h3>Bursa</h3>
-      <p>Bursa bölgesinde servis taleplerinizi değerlendirelim.</p>
-    </div>
-  </div>
 </section>
 
 <section class="contact" id="iletisim">
-  <span>ADA TEKNİK SERVİS</span>
-  <h2>Servis Talebiniz mi Var?</h2>
-  <p>Bize ulaşın, cihazınızın arızasını birlikte değerlendirelim.</p>
+    <span>ADA TEKNİK SERVİS</span>
+    <h2>Teknik Servis İçin Bize Ulaşın</h2>
+    <p>Buzdolabı veya kombi arızanız için hemen iletişime geçin.</p>
 
-  <a class="contact-phone" href="tel:05346913411"
-     onclick="return gtag_report_conversion('tel:05346913411')">
-    ☎ 0534 691 34 11
-  </a>
+    <div class="contact-actions">
+        <a href="tel:+905346913411" class="button button-call track-call">
+            ☎ 0534 691 34 11
+        </a>
+        <a href="https://wa.me/905346913411" class="button button-whatsapp" target="_blank" rel="noopener">
+            WhatsApp'tan Yaz
+        </a>
+    </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="footer-logo">ADA <span>TEKNİK SERVİS</span></div>
-  <p>Bursa Buzdolabı ve Kombi Servisi</p>
-  <p class="copyright">© 2026 Ada Teknik Servis. Tüm hakları saklıdır.</p>
+    <div class="footer-brand">ADA <span>TEKNİK SERVİS</span></div>
+    <p>Bursa Buzdolabı ve Kombi Teknik Servisi</p>
+    <p>© 2026 Ada Teknik Servis. Tüm hakları saklıdır.</p>
 </footer>
 
-<!-- MOBİLDE SÜREKLİ SABİT İLETİŞİM MENÜSÜ -->
-<div class="mobile-contact">
-  <a class="mobile-call" href="tel:05346913411"
-     onclick="return gtag_report_conversion('tel:05346913411')">
-    <span>☎</span> HEMEN ARA
-  </a>
-
-  <a class="mobile-whatsapp"
-     href="https://wa.me/905346913411"
-     target="_blank" rel="noopener"
-     onclick="trackWhatsApp()">
-    <span>◉</span> WHATSAPP
-  </a>
+<!-- MOBİL SABİT İLETİŞİM MENÜSÜ -->
+<div class="fixed-contact">
+    <a href="tel:+905346913411" class="fixed-call track-call">
+        ☎ HEMEN ARA
+    </a>
+    <a href="https://wa.me/905346913411" class="fixed-whatsapp" target="_blank" rel="noopener">
+        ◉ WHATSAPP
+    </a>
 </div>
 
 </body>

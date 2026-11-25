@@ -1,108 +1,530 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ada Teknik Servis | Bursa Buzdolabı ve Kombi Servisi</title>
-  <meta name="description" content="Bursa'da buzdolabı ve kombi arızaları için hızlı, güvenilir ve garantili teknik servis. Hemen arayın.">
-  <meta name="theme-color" content="#080909">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ada Teknik Servis Bursa | Aynı Gün Garantili Beyaz Eşya & Kombi Tamiri</title>
+  <meta name="description" content="Bursa Nilüfer, Osmangazi, Yıldırım, Görükle, Mudanya ve Kestel'de aynı gün yerinde beyaz eşya, kombi ve klima servisi. 1 Yıl Garanti. Hemen Ara: 0534 691 34 11" />
+  <meta name="keywords" content="bursa teknik servis, nilüfer beyaz eşya servisi, bursa kombi tamiri, osmangazi buzdolabı tamircisi, ada teknik servis bursa" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Google Yerel İşletme SEO Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Ada Teknik Servis Bursa",
+    "telephone": "+905346913411",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Papatya Sokak, Fethiye Mahallesi",
+      "addressLocality": "Nilüfer",
+      "addressRegion": "Bursa",
+      "postalCode": "16110",
+      "addressCountry": "TR"
+    },
+    "areaServed": ["Nilüfer", "Osmangazi", "Yıldırım", "Görükle", "Mudanya", "Kestel", "Özlüce", "Fethiye"],
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "₺₺"
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Ads etiketi -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18052207014');
-  </script>
-  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+/* Ada Teknik Servis Bursa - Özel Stil Dosyası */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #E2E8F0;
+  color: #0F172A;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Hemen Ara Butonu Nabız Efekti */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(255, 87, 34, 0);
+  }
+  100% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+  }
+}
+
+.cta-pulse {
+  animation: pulseRing 2s infinite;
+}
+
+/* Akordiyon ok animasyonu */
+details[open] summary svg {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+details summary svg {
+  transition: transform 0.2s ease;
+}
+
+  </style>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#anasayfa" aria-label="Ada Teknik Servis ana sayfa">
-      <span class="brand-mark">⚙</span>
-      <span class="brand-main"><strong>ADA</strong><b>TEKNİK SERVİS</b></span>
-      <span class="brand-divider"></span>
-      <span class="brand-sub">Bursa<br>Buzdolabı &amp; Kombi<br>Teknik Servis</span>
-    </a>
-    <nav class="main-nav" aria-label="Ana menü">
-      <a class="active" href="#anasayfa">Ana Sayfa</a>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#neden-biz">Neden Biz?</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
-    <a class="header-phone" href="tel:+905346913411" data-call><span>☎</span> 0534 691 34 11</a>
-    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
-  </header>
+<body class="antialiased selection:bg-[#FF5722] selection:text-white">
 
-  <main>
-    <section class="hero" id="anasayfa">
-      <div class="hero-shade"></div>
-      <div class="hero-copy">
-        <div class="eyebrow"><span>📍</span> BURSA · ADA TEKNİK SERVİS</div>
-        <h1>Bursa Buzdolabı ve<br><em>Kombi Servisi</em></h1>
-        <div class="yellow-swoosh"></div>
-        <p class="hero-description">Buzdolabı ve kombi arızalarınız için<br class="desktop-only"> hızlı, güvenilir ve garantili teknik servis.</p>
-        <div class="quick-points">
-          <span><b>ϟ</b> Hızlı Servis</span>
-          <span><b>⬟</b> Garantili İşçilik</span>
-          <span><b>●</b> Bursa Geneli</span>
+  <!-- Mobil Öncelikli Ana Çerçeve -->
+  <div class="max-w-[480px] mx-auto min-h-screen bg-[#F8FAFC] shadow-2xl pb-28 relative overflow-x-hidden">
+
+    <!-- Üst Canlı Müsaitlik Şeridi -->
+    <div class="bg-[#06101E] text-white text-[11px] font-semibold py-2 px-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span>Bursa İçi <strong>3 Mobil Ekip</strong> Şu An Müsait</span>
+      </div>
+      <span class="text-sky-300 font-bold">Ort. 45 Dk Ulaşım</span>
+    </div>
+
+    <!-- Kurumsal Sabit Üst Menü -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 py-3 flex items-center justify-between shadow-sm">
+      <div class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0A192F] to-[#1E3A8A] text-white flex items-center justify-center shadow-md">
+          <i data-lucide="shield-check" class="w-6 h-6 text-[#FF5722]"></i>
         </div>
-        <div class="hero-actions">
-          <a class="btn btn-yellow" href="tel:+905346913411" data-call><span>☎</span> Hemen Ara</a>
-          <a class="btn btn-green" href="https://wa.me/905346913411" target="_blank" rel="noopener"><span class="wa-symbol">◉</span> WhatsApp'tan Yaz</a>
+        <div>
+          <div class="font-display font-black text-lg leading-none text-[#0A192F] tracking-tight">
+            ADA <span class="text-[#FF5722]">TEKNİK</span>
+          </div>
+          <span class="text-[11px] font-semibold text-slate-500 block mt-0.5">Bursa Kurumsal Servis Merkezi</span>
         </div>
       </div>
-      <div class="hero-products" aria-hidden="true">
-        <img class="hero-fridge" src="images/buzdolabi.jpg" alt="">
-        <img class="hero-boiler" src="images/kombi.jpg" alt="">
+
+      <a href="tel:05346913411" class="bg-orange-50 active:scale-95 transition border border-orange-200 text-[#FF5722] font-display font-extrabold text-xs px-3 py-2 rounded-xl flex items-center gap-1.5">
+        <i data-lucide="phone" class="w-3.5 h-3.5 fill-[#FF5722]"></i>
+        0534 691 34 11
+      </a>
+    </header>
+
+    <!-- YENİ NESİL DÖNÜŞÜM ODAKLI GİRİŞ (HERO) -->
+    <section class="bg-gradient-to-br from-[#0A192F] via-[#0F294A] to-[#173B6C] text-white px-4 pt-6 pb-8 rounded-b-[32px] shadow-xl relative overflow-hidden">
+      <!-- Dekoratif Arka Plan Işığı -->
+      <div class="absolute -top-20 -right-20 w-56 h-56 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-20 -left-20 w-56 h-56 bg-[#FF5722]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Müşteri Puanı Rozeti -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1.5 rounded-full mb-4">
+        <div class="flex text-amber-400">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+        </div>
+        <span class="text-[11px] font-bold text-slate-100">4.9/5 Bursa Müşteri Memnuniyeti</span>
       </div>
-      <div class="hero-service-links">
-        <a href="#hizmetler" class="service-link fridge-link"><span class="service-icon snow">❄</span><span><strong>Buzdolabı Servisi</strong><small>Soğutmama, motor, gaz ve<br> elektronik kart arızaları.</small></span><b class="arrow">›</b></a>
-        <a href="#hizmetler" class="service-link boiler-link"><span class="service-icon flame">♨</span><span><strong>Kombi Servisi</strong><small>Isıtma, sıcak su ve<br> kombi arızaları.</small></span><b class="arrow">›</b></a>
+
+      <!-- Ana SEO Başlığı -->
+      <h1 class="font-display font-black text-[26px] leading-[1.18] tracking-tight mb-3">
+        Cihazınız mı Bozuldu? <br/>
+        <span class="text-[#FF7043]">Aynı Gün Kapınızdayız!</span>
+      </h1>
+
+      <p class="text-xs text-slate-200 leading-relaxed mb-5">
+        Bursa <strong class="text-white">Nilüfer, Osmangazi, Yıldırım, Görükle, Mudanya ve Kestel</strong> bölgelerinde; buzdolabı, çamaşır-bulaşık makinesi ve kombi arızalarını evinizde, <strong class="text-white">1 yıl yazılı garanti</strong> ile onarıyoruz.
+      </p>
+
+      <!-- Hemen Arama CTA Kartı -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-3.5 mb-5">
+        <div class="flex items-center justify-between text-[11px] text-sky-200 font-semibold mb-2">
+          <span>⚡ Ücretsiz Ön Arıza Danışmanlığı</span>
+          <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-md">Hat Açık</span>
+        </div>
+        
+        <a href="tel:05346913411" class="cta-pulse w-full bg-[#FF5722] hover:bg-[#F4511E] active:scale-[0.98] transition text-white font-display font-extrabold text-base py-4 px-4 rounded-xl flex items-center justify-center gap-2.5 shadow-lg">
+          <i data-lucide="phone-call" class="w-5 h-5 stroke-[2.5]"></i>
+          <span>0534 691 34 11 - HEMEN ARA</span>
+        </a>
+
+        <div class="mt-2.5 text-center">
+          <a href="#hizli-talep" class="text-xs font-semibold text-sky-200 underline underline-offset-4 hover:text-white">
+            Veya 15 Saniyede Online Servis Kaydı Bırakın →
+          </a>
+        </div>
       </div>
-      <div class="hero-corner"></div>
+
+      <!-- 3'lü Hızlı Avantaj Şeridi -->
+      <div class="grid grid-cols-3 gap-2 text-center">
+        <div class="bg-[#06101E]/60 border border-white/10 rounded-xl py-2.5 px-1.5">
+          <div class="font-display font-extrabold text-sm text-[#FF7043]">%100</div>
+          <div class="text-[10px] text-slate-300 font-medium mt-0.5">Orijinal Parça</div>
+        </div>
+        <div class="bg-[#06101E]/60 border border-white/10 rounded-xl py-2.5 px-1.5">
+          <div class="font-display font-extrabold text-sm text-sky-300">1 YIL</div>
+          <div class="text-[10px] text-slate-300 font-medium mt-0.5">Resmi Garanti</div>
+        </div>
+        <div class="bg-[#06101E]/60 border border-white/10 rounded-xl py-2.5 px-1.5">
+          <div class="font-display font-extrabold text-sm text-emerald-400">AYNI GÜN</div>
+          <div class="text-[10px] text-slate-300 font-medium mt-0.5">Yerinde Çözüm</div>
+        </div>
+      </div>
     </section>
 
-    <section class="services" id="hizmetler">
-      <div class="section-kicker"><i></i> HİZMETLERİMİZ <i></i></div>
-      <h2>Buzdolabı ve Kombi Teknik Servisi</h2>
-      <div class="service-grid">
-        <article class="service-card">
-          <img src="images/buzdolabi.jpg" alt="Buzdolabı teknik servis hizmeti" loading="lazy">
-          <div><h3>Buzdolabı Tamiri</h3><p>Soğutmama, motor, gaz kaçağı ve elektronik kart arızalarında teknik destek.</p><a href="tel:+905346913411" data-call>Servis için ara <span>›</span></a></div>
-        </article>
-        <article class="service-card">
-          <img src="images/kombi.jpg" alt="Kombi teknik servis hizmeti" loading="lazy">
-          <div><h3>Kombi Tamiri</h3><p>Isıtma ve sıcak su sorunları için arıza tespiti ve onarım hizmeti.</p><a href="tel:+905346913411" data-call>Servis için ara <span>›</span></a></div>
-        </article>
+    <!-- ARIZA SEÇİMİ İLE HIZLI YÖNLENDİRME -->
+    <section class="px-4 pt-6 pb-4">
+      <div class="mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-[#FF5722]">Cihazınızı Seçin</span>
+        <h2 class="font-display font-extrabold text-xl text-[#0A192F]">Hangi Cihazınızda Sorun Var?</h2>
+        <p class="text-xs text-slate-500 mt-0.5">Cihazınıza dokunun, uzman teknisyenimize doğrudan bağlanın.</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <!-- Kart 1 -->
+        <a href="tel:05346913411" class="bg-white border border-slate-200/90 hover:border-[#FF5722] active:scale-[0.98] transition rounded-2xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-sky-50 text-[#0284C7] flex items-center justify-center mb-2.5">
+              <i data-lucide="snowflake" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-sm text-[#0A192F]">Buzdolabı Servisi</h3>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Soğutmama, motor sesi, su akıtma, kart arızası</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#FF5722]">
+            <span>Ustayı Ara</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
+
+        <!-- Kart 2 -->
+        <a href="tel:05346913411" class="bg-white border border-slate-200/90 hover:border-[#FF5722] active:scale-[0.98] transition rounded-2xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-2.5">
+              <i data-lucide="disc" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-sm text-[#0A192F]">Çamaşır Makinesi</h3>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Su almama, sıkmama, kazan rulman ve pompa tamiri</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#FF5722]">
+            <span>Ustayı Ara</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
+
+        <!-- Kart 3 -->
+        <a href="tel:05346913411" class="bg-white border border-slate-200/90 hover:border-[#FF5722] active:scale-[0.98] transition rounded-2xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-orange-50 text-[#FF5722] flex items-center justify-center mb-2.5">
+              <i data-lucide="flame" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-sm text-[#0A192F]">Kombi Tamiri</h3>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Sıcak su vermeme, ateşleme hatası ve petek bakımı</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#FF5722]">
+            <span>Ustayı Ara</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
+
+        <!-- Kart 4 -->
+        <a href="tel:05346913411" class="bg-white border border-slate-200/90 hover:border-[#FF5722] active:scale-[0.98] transition rounded-2xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-2.5">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-sm text-[#0A192F]">Bulaşık Makinesi</h3>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Kirli yıkama, ısıtmama, su boşaltmama arızaları</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#FF5722]">
+            <span>Ustayı Ara</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
+
+        <!-- Kart 5 -->
+        <a href="tel:05346913411" class="bg-white border border-slate-200/90 hover:border-[#FF5722] active:scale-[0.98] transition rounded-2xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-2.5">
+              <i data-lucide="wind" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-sm text-[#0A192F]">Klima Bakım & Gaz</h3>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Gaz dolumu, soğutmama, söküm-montaj ve bakım</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#FF5722]">
+            <span>Ustayı Ara</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
+
+        <!-- Kart 6 -->
+        <a href="tel:05346913411" class="bg-white border border-slate-200/90 hover:border-[#FF5722] active:scale-[0.98] transition rounded-2xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-2.5">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-sm text-[#0A192F]">Elektrikli Süpürge</h3>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Çekiş düşüklüğü, motor yanması, kablo ve kart tamiri</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#FF5722]">
+            <span>Ustayı Ara</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section class="why-us" id="neden-biz">
-      <div class="section-kicker"><i></i> NEDEN ADA TEKNİK? <i></i></div>
-      <h2>Bizi Neden Tercih Etmelisiniz?</h2>
-      <div class="benefit-grid">
-        <article class="benefit"><span class="benefit-icon">ϟ</span><div><h3>Hızlı Servis</h3><p>Arızanıza en kısa sürede müdahale ediyoruz.</p></div></article>
-        <article class="benefit"><span class="benefit-icon">⚒</span><div><h3>Uzman Teknik Destek</h3><p>Buzdolabı ve kombi konusunda deneyimli servis.</p></div></article>
-        <article class="benefit"><span class="benefit-icon">♢</span><div><h3>Garantili Onarım</h3><p>Yapılan işlemler için işçilik garantisi.</p></div></article>
-        <article class="benefit"><span class="benefit-icon">●</span><div><h3>Bursa Geneli Hizmet</h3><p>Bursa'nın birçok bölgesine servis desteği sağlıyoruz.</p></div></article>
+    <!-- NEDEN ADA TEKNİK SERVİS? -->
+    <section class="px-4 py-5">
+      <div class="bg-[#0A192F] text-white rounded-3xl p-5 shadow-lg">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400">Şeffaf Fiyat Politikası</span>
+        <h2 class="font-display font-extrabold text-lg mt-0.5 mb-3">Sürpriz Ücret Yok, Onaylı Onarım Var!</h2>
+        
+        <div class="space-y-3 text-xs">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <p class="text-slate-200"><strong class="text-white">Önce Net Fiyat Bilgisi:</strong> Teknisyenimiz arızayı tespit eder, tamir ücretini size söyler. Siz onaylamadan hiçbir işlem yapılmaz.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <p class="text-slate-200"><strong class="text-white">Atölyeye Taşımadan Evde Tamir:</strong> Arızaların %90'ını tam donanımlı mobil araçlarımızla ilk ziyarette evinizde çözüyoruz.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <p class="text-slate-200"><strong class="text-white">Dijital Servis Fişi & 1 Yıl Garanti:</strong> Değişen tüm parçalar faturalı/fişli olarak 1 yıl boyunca Ada Teknik Servis güvencesindedir.</p>
+          </div>
+        </div>
+
+        <a href="tel:05346913411" class="mt-4 w-full bg-white text-[#0A192F] font-display font-extrabold text-sm py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
+          <i data-lucide="phone" class="w-4 h-4 text-[#FF5722]"></i>
+          Fiyat ve Randevu İçin Ara
+        </a>
       </div>
     </section>
-  </main>
 
-  <footer id="iletisim">
-    <strong>ADA TEKNİK SERVİS</strong>
-    <span>Bursa Buzdolabı &amp; Kombi Teknik Servis</span>
-    <a href="tel:+905346913411" data-call>0534 691 34 11</a>
-  </footer>
+    <!-- BURSA MÜŞTERİ YORUMLARI -->
+    <section class="px-4 py-4">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#FF5722]">Gerçek Deneyimler</span>
+          <h2 class="font-display font-extrabold text-lg text-[#0A192F]">Bursa Müşteri Yorumları</h2>
+        </div>
+        <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">Doğrulanmış</span>
+      </div>
 
-  <div class="mobile-contact" aria-label="Hızlı iletişim">
-    <a class="mobile-call" href="tel:+905346913411" data-call><span>☎</span> HEMEN ARA&nbsp; 0534 691 34 11</a>
-    <a class="mobile-whatsapp" href="https://wa.me/905346913411" target="_blank" rel="noopener"><span>◉</span> WHATSAPP'TAN YAZ</a>
+      <div class="space-y-2.5">
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-3.5 shadow-sm">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-xs text-[#0A192F]">Selin K. — Nilüfer / Özlüce</span>
+            <span class="text-amber-400 text-xs">★★★★★</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            "Buzdolabımız pazar günü soğutmayı kesti. Aradıktan 40 dakika sonra geldiler, fan motorunu orijinal parçayla değiştirip 1 yıl garanti fişi verdiler. Çok memnun kaldık."
+          </p>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-3.5 shadow-sm">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-xs text-[#0A192F]">Murat D. — Osmangazi / Çekirge</span>
+            <span class="text-amber-400 text-xs">★★★★★</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            "Kombi sıcak su vermiyordu. Gereksiz parça değiştirmeden sensör arızasını makul fiyata çözdüler. Dürüst ve işinin ehli esnaf."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIK SORULAN SORULAR -->
+    <section class="px-4 py-4">
+      <h2 class="font-display font-extrabold text-lg text-[#0A192F] mb-3">Sıkça Sorulan Sorular</h2>
+      
+      <div class="space-y-2">
+        <details class="bg-white border border-slate-200 rounded-xl p-3.5 group" open>
+          <summary class="font-bold text-xs text-[#0A192F] cursor-pointer flex items-center justify-between list-none">
+            <span>Bursa'nın hangi ilçelerine aynı gün servisiniz var?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Nilüfer (Fethiye, Özlüce, Görükle, Ertuğrul, İhsaniye), Osmangazi, Yıldırım, Mudanya ve Kestel başta olmak üzere Bursa merkez tüm mahallelere aynı gün mobil servis hizmeti sunuyoruz.
+          </p>
+        </details>
+
+        <details class="bg-white border border-slate-200 rounded-xl p-3.5 group">
+          <summary class="font-bold text-xs text-[#0A192F] cursor-pointer flex items-center justify-between list-none">
+            <span>Hangi marka beyaz eşya ve kombilere bakıyorsunuz?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Arçelik, Beko, Bosch, Siemens, Profilo, Vestel, Samsung, LG, Regal, Altus, Vaillant, Demirdöküm, E.C.A, Baymak ve Buderus dahil tüm markalara özel teknik servis hizmeti veriyoruz.
+          </p>
+        </details>
+
+        <details class="bg-white border border-slate-200 rounded-xl p-3.5 group">
+          <summary class="font-bold text-xs text-[#0A192F] cursor-pointer flex items-center justify-between list-none">
+            <span>Değişen yedek parçalar garantili mi?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Evet, Ada Teknik Servis tarafından değiştirilen tüm orijinal yedek parçalar ve yapılan işçilik 1 yıl boyunca servis garantisi kapsamındadır.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 15 SANİYEDE HIZLI WHATSAPP SERVİS KAYIT FORMU -->
+    <section id="hizli-talep" class="px-4 py-5">
+      <div class="bg-white border-2 border-[#0A192F] rounded-3xl p-4 shadow-lg">
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#FF5722]">Hızlı Geri Dönüş</span>
+          <span class="text-[11px] font-semibold text-slate-400">Ort. 5 Dk İçinde Dönüş</span>
+        </div>
+        <h2 class="font-display font-extrabold text-lg text-[#0A192F]">Biz Sizi Arayalım</h2>
+        <p class="text-xs text-slate-500 mb-4">Numaranızı bırakın veya doğrudan WhatsApp'tan iletin.</p>
+
+        <form id="ceoWhatsappForm" class="space-y-3">
+          <div>
+            <input type="text" id="adSoyad" required placeholder="Adınız Soyadınız" class="w-full bg-slate-50 border border-slate-300 focus:border-[#0A192F] rounded-xl px-3.5 py-3 text-sm text-slate-900 outline-none" />
+          </div>
+          <div>
+            <input type="tel" id="telefon" required placeholder="Telefon Numaranız (05XX...)" class="w-full bg-slate-50 border border-slate-300 focus:border-[#0A192F] rounded-xl px-3.5 py-3 text-sm text-slate-900 outline-none" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <select id="ilce" class="w-full bg-slate-50 border border-slate-300 focus:border-[#0A192F] rounded-xl px-3 py-3 text-sm text-slate-900 outline-none">
+              <option value="Nilüfer">Nilüfer</option>
+              <option value="Osmangazi">Osmangazi</option>
+              <option value="Yıldırım">Yıldırım</option>
+              <option value="Görükle">Görükle</option>
+              <option value="Mudanya">Mudanya</option>
+              <option value="Kestel">Kestel</option>
+              <option value="Bursa Merkez">Diğer İlçe</option>
+            </select>
+            <select id="cihaz" class="w-full bg-slate-50 border border-slate-300 focus:border-[#0A192F] rounded-xl px-3 py-3 text-sm text-slate-900 outline-none">
+              <option value="Buzdolabı">Buzdolabı</option>
+              <option value="Çamaşır Makinesi">Çamaşır Makinesi</option>
+              <option value="Kombi">Kombi</option>
+              <option value="Bulaşık Makinesi">Bulaşık Makinesi</option>
+              <option value="Klima">Klima</option>
+              <option value="Süpürge">Elektrikli Süpürge</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" id="sorun" placeholder="Kısaca arıza nedir? (Örn: Su akıtıyor)" class="w-full bg-slate-50 border border-slate-300 focus:border-[#0A192F] rounded-xl px-3.5 py-3 text-sm text-slate-900 outline-none" />
+          </div>
+
+          <button type="submit" class="w-full bg-[#0A192F] hover:bg-[#173B6C] active:scale-[0.98] transition text-white font-display font-extrabold text-sm py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="send" class="w-4 h-4 text-[#FF5722]"></i>
+            WhatsApp'tan Teknisyene Gönder
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- KURUMSAL ALT BİLGİ -->
+    <footer class="bg-[#06101E] text-slate-300 px-4 py-6 text-center space-y-2.5">
+      <div class="font-display font-black text-base text-white">
+        ADA <span class="text-[#FF5722]">TEKNİK SERVİS</span> BURSA
+      </div>
+      <p class="text-xs text-slate-400">
+        Papatya Sokak, Fethiye Mah. Nilüfer / Bursa<br/>
+        7/24 Çağrı Merkezi: <a href="tel:05346913411" class="text-white font-bold">0534 691 34 11</a>
+      </p>
+      <p class="text-[10px] text-slate-500 pt-2 border-t border-slate-800">
+        © 2026 Ada Teknik Servis. Tüm markalar için bağımsız özel teknik servis hizmeti verilmektedir.
+      </p>
+    </footer>
+
   </div>
+
+  <!-- EKRAN ALTINDA SABİT İKİLİ AKSİYON BARI (SOL: WHATSAPP | SAĞ: HEMEN ARA) -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 pointer-events-none">
+    <div class="max-w-[480px] mx-auto px-3 pb-3 pt-2 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-transparent pointer-events-auto">
+      <div class="grid grid-cols-2 gap-2.5">
+        
+        <!-- SOL: SABİT WHATSAPP -->
+        <a 
+          href="https://wa.me/905346913411?text=Merhaba%20Ada%20Teknik%20Servis%2C%20cihaz%C4%B1m%20i%C3%A7in%20servis%20randevusu%20almak%20istiyorum." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="bg-[#16A34A] hover:bg-[#15803D] active:scale-95 transition text-white font-display font-extrabold text-sm py-3.5 px-3 rounded-2xl flex items-center justify-center gap-2 shadow-xl"
+        >
+          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+
+        <!-- SAĞ: SABİT HEMEN ARA -->
+        <a 
+          href="tel:05346913411" 
+          class="bg-[#FF5722] hover:bg-[#F4511E] active:scale-95 transition text-white font-display font-extrabold text-sm py-3.5 px-3 rounded-2xl flex items-center justify-center gap-2 shadow-xl"
+        >
+          <i data-lucide="phone-call" class="w-5 h-5 stroke-[2.5] shrink-0"></i>
+          <span>Hemen Ara</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+// Ada Teknik Servis Bursa - Etkileşim & WhatsApp Entegrasyonu
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Lucide ikonlarını başlat
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
+  // Hızlı WhatsApp Servis Kayıt Formu
+  const form = document.getElementById('ceoWhatsappForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const ad = document.getElementById('adSoyad').value.trim();
+      const tel = document.getElementById('telefon').value.trim();
+      const ilce = document.getElementById('ilce').value;
+      const cihaz = document.getElementById('cihaz').value;
+      const sorun = document.getElementById('sorun').value.trim() || 'Belirtilmedi';
+
+      const metin =
+        `*ADA TEKNİK SERVİS - HIZLI KAYIT*%0A` +
+        `👤 *Müşteri:* ${encodeURIComponent(ad)}%0A` +
+        `📞 *Telefon:* ${encodeURIComponent(tel)}%0A` +
+        `📍 *Bölge:* ${encodeURIComponent(ilce)} / Bursa%0A` +
+        `🔧 *Cihaz:* ${encodeURIComponent(cihaz)}%0A` +
+        `📝 *Arıza:* ${encodeURIComponent(sorun)}`;
+
+      window.open(`https://wa.me/905346913411?text=${metin}`, '_blank');
+    });
+  }
+});
+
+  </script>
 </body>
 </html>

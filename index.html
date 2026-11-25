@@ -8,6 +8,15 @@
   <meta name="keywords" content="bursa teknik servis, nilüfer beyaz eşya servisi, bursa kombi tamiri, osmangazi buzdolabı tamircisi, ada teknik servis bursa" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Google Ads Ana Etiketi (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052207014"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18052207014');
+  </script>
+
   <!-- Google Yerel İşletme SEO Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -38,8 +47,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
 
   <style>
-/* Ada Teknik Servis Bursa - Özel Stil Dosyası */
-
 html {
   scroll-behavior: smooth;
 }
@@ -55,7 +62,6 @@ h1, h2, h3, .font-display {
   font-family: 'Outfit', sans-serif;
 }
 
-/* Hemen Ara Butonu Nabız Efekti */
 @keyframes pulseRing {
   0% {
     transform: scale(0.96);
@@ -75,7 +81,6 @@ h1, h2, h3, .font-display {
   animation: pulseRing 2s infinite;
 }
 
-/* Akordiyon ok animasyonu */
 details[open] summary svg {
   transform: rotate(180deg);
   transition: transform 0.2s ease;
@@ -84,7 +89,6 @@ details[open] summary svg {
 details summary svg {
   transition: transform 0.2s ease;
 }
-
   </style>
 
   <!-- Lucide Icons -->
@@ -129,7 +133,6 @@ details summary svg {
 
     <!-- YENİ NESİL DÖNÜŞÜM ODAKLI GİRİŞ (HERO) -->
     <section class="bg-gradient-to-br from-[#0A192F] via-[#0F294A] to-[#173B6C] text-white px-4 pt-6 pb-8 rounded-b-[32px] shadow-xl relative overflow-hidden">
-      <!-- Dekoratif Arka Plan Işığı -->
       <div class="absolute -top-20 -right-20 w-56 h-56 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -bottom-20 -left-20 w-56 h-56 bg-[#FF5722]/20 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -492,7 +495,7 @@ details summary svg {
   </div>
 
   <script>
-// Ada Teknik Servis Bursa - Etkileşim & WhatsApp Entegrasyonu
+// Ada Teknik Servis Bursa - Etkileşim, WhatsApp & Google Ads Dönüşüm Entegrasyonu
 
 document.addEventListener('DOMContentLoaded', function () {
   // Lucide ikonlarını başlat
@@ -500,11 +503,29 @@ document.addEventListener('DOMContentLoaded', function () {
     lucide.createIcons();
   }
 
+  // Tüm Hemen Ara (tel:) ve WhatsApp (wa.me) buton tıklamalarını Google Ads'e bildir
+  document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]').forEach(function (buton) {
+    buton.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18052207014/HXqVCI2Ir78dEKaj-59D'
+        });
+      }
+    });
+  });
+
   // Hızlı WhatsApp Servis Kayıt Formu
   const form = document.getElementById('ceoWhatsappForm');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      // Form gönderimini de Google Ads dönüşümü olarak bildir
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18052207014/HXqVCI2Ir78dEKaj-59D'
+        });
+      }
 
       const ad = document.getElementById('adSoyad').value.trim();
       const tel = document.getElementById('telefon').value.trim();
@@ -524,7 +545,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
   </script>
 </body>
 </html>
